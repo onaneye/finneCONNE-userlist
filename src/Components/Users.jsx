@@ -4,8 +4,8 @@ import { person1, person2, person3, person4 } from "../images";
 const Users = () => {
   const data = [
     {
-      id: 1,
-      name: "Adewale Obafemi",
+      id: 1, 
+      name: "Feranmi Adesua",
       img: person1 // Update with correct image path
     },
     {
@@ -15,7 +15,7 @@ const Users = () => {
     },
     {
       id: 3,
-      name: "Feranmi Adesua",
+      name: "Adewale Obafemi",
       img: person3 // Update with correct image path
     },
     {
