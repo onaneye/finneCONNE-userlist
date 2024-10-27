@@ -48,7 +48,6 @@ const Users = () => {
               className={`flex items-center gap-4 p-4 border-b transition-all duration-500 ${fade ? 'fade-out' : ''}`} >
               <div
                 className="h-16 w-16 rounded-full"
-                // style={{ backgroundImage: `url(${user.img})`, backgroundSize: "cover" }}
               ><img src={user.img} alt={user.name} loading="lazy" className="object-cover w-full rounded-full"/></div>
               {user.name}
             </li>
