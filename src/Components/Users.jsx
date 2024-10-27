@@ -1,27 +1,27 @@
 import { useState } from "react";
-
+import { person1, person2, person3, person4 } from "../images";
 
 const Users = () => {
   const data = [
     {
       id: 1,
       name: "Adewale Obafemi",
-      img: "./img/adewale.jpg" // Update with correct image path
+      img: person1 // Update with correct image path
     },
     {
       id: 2,
       name: "Onaneye Joseph",
-      img: "./img/onaneye.jpg" // Update with correct image path
+      img: person2 // Update with correct image path
     },
     {
       id: 3,
       name: "Feranmi Adesua",
-      img: "./img/feranmi.jpg" // Update with correct image path
+      img: person3 // Update with correct image path
     },
     {
       id: 4,
       name: "Peter Johnson",
-      img: "./img/peter.jpg" // Update with correct image path
+      img: person4 // Update with correct image path
     }
   ];
 
@@ -35,7 +35,7 @@ const Users = () => {
       const shuffled = [...usersData].sort(() => Math.random() - 0.5);
       setUsersData(shuffled);
       setFade(false);
-    }, 1000);
+    }, 500);
   };
 
   return (
@@ -47,9 +47,9 @@ const Users = () => {
               key={user.id}
               className={`flex items-center gap-4 p-4 border-b transition-all duration-500 ${fade ? 'fade-out' : ''}`} >
               <div
-                className="h-12 w-12 rounded-full bg-blue-500"
-                style={{ backgroundImage: `url(${user.img})`, backgroundSize: "cover" }}
-              ></div>
+                className="h-16 w-16 rounded-full"
+                // style={{ backgroundImage: `url(${user.img})`, backgroundSize: "cover" }}
+              ><img src={user.img} alt={user.name} loading="lazy" className="object-cover w-full rounded-full"/></div>
               {user.name}
             </li>
           ))}
